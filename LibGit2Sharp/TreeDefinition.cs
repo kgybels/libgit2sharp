@@ -13,8 +13,8 @@ namespace LibGit2Sharp
     /// </summary>
     public class TreeDefinition
     {
-        private readonly Dictionary<string, TreeEntryDefinition> entries = new Dictionary<string, TreeEntryDefinition>();
-        private readonly Dictionary<string, TreeDefinition> unwrappedTrees = new Dictionary<string, TreeDefinition>();
+        private readonly Dictionary<string, TreeEntryDefinition> entries = new Dictionary<string, TreeEntryDefinition>(StringComparer.InvariantCultureIgnoreCase);
+        private readonly Dictionary<string, TreeDefinition> unwrappedTrees = new Dictionary<string, TreeDefinition>(StringComparer.InvariantCultureIgnoreCase);
 
         /// <summary>
         /// Builds a <see cref="TreeDefinition"/> from an existing <see cref="Tree"/>.
